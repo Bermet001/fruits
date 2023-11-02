@@ -13,7 +13,7 @@ export const Products = ({
   return (
     <ProductsContainer>
       <Title>Товары в магазине:</Title>
-      <div>
+      <InnerDiv>
         {products.map((item) => {
           return (
             <ProductItem
@@ -25,7 +25,7 @@ export const Products = ({
             />
           );
         })}
-      </div>
+      </InnerDiv>
       <ShoppingCartIcon />{" "}
       <h3>
         Total Price:{totalPrice}${/*цены космические*/}
@@ -46,4 +46,10 @@ const Title = styled.h2`
 
 const ShoppingCartIcon = styled(FaShoppingBasket)`
   font-size: 36px;
+`;
+
+const InnerDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;

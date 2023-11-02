@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect } from "react";
 import { Products } from "./Products";
-import Cart from "./Cart";
+import Card from "./Card";
 
 const initProduct = () => {
   const storedProducts = localStorage.getItem("products");
@@ -147,7 +147,7 @@ const OnlineStore = () => {
   console.log(products);
   return (
     <>
-      <Cart cardEl={products.cart} />
+      <Card cardEl={products.cart} />
       <Products
         products={products.products}
         onAddProduct={addProductHandler}
